@@ -135,6 +135,7 @@
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+  background-color: var(--color-tertiary); /* Subrayado naranja para resaltar */
 }
 
 .navbar__actions {
@@ -217,8 +218,10 @@
   border: none;
 }
 .btn--primary:hover {
-  background: #ffffff;
+  background: var(--color-tertiary);
   color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 136, 0, 0.3); /* Brillo naranja sutil */
 }
 
 /* Secondary Button */
@@ -230,6 +233,8 @@
 }
 .btn--secondary:hover {
   background-color: var(--color-surface-container-high);
+  border-color: var(--color-tertiary);
+  color: var(--color-tertiary);
 }
 
 /* CTA small */
@@ -598,10 +603,18 @@
   font-size: var(--text-label-sm);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--color-primary);
-  background-color: var(--color-surface-container);
+  color: var(--color-tertiary); /* Letras en naranja para que no mueran en el gris */
+  background-color: rgba(255, 136, 0, 0.05);
+  border: 1px solid rgba(255, 136, 0, 0.2);
   padding: var(--space-2) var(--space-4);
   display: inline-block;
+  transition: all var(--transition-fast);
+}
+
+.tech-badge:hover {
+  background-color: var(--color-tertiary);
+  color: #000;
+  border-color: var(--color-tertiary);
 }
 
 .tech-badges {
