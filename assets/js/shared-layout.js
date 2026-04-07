@@ -32,10 +32,10 @@ function initNavbar() {
       </button>
       
       <ul class="navbar__links" id="nav-links" role="list">
-        <li><a href="${basePath}index.html" class="nav-link ${isCurrentPage('index.html') ? 'active' : ''}">Home</a></li>
-        <li><a href="${basePath}pages/services.html" class="nav-link ${isCurrentPage('services.html') ? 'active' : ''}">Services</a></li>
-        <li><a href="${basePath}pages/about.html" class="nav-link ${isCurrentPage('about.html') ? 'active' : ''}">About</a></li>
-        <li><a href="${basePath}pages/contact.html" class="nav-link ${isCurrentPage('contact.html') ? 'active' : ''}">Contact</a></li>
+        <li><a href="${basePath}index.html" class="nav-link">Home</a></li>
+        <li><a href="${basePath}pages/services.html" class="nav-link">Services</a></li>
+        <li><a href="${basePath}pages/about.html" class="nav-link">About</a></li>
+        <li><a href="${basePath}pages/contact.html" class="nav-link">Contact</a></li>
       </ul>
       
       <div class="navbar__actions">
