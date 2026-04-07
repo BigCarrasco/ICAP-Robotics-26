@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
   <title>Contact Us | ICAP Engineering — Get a Free Industrial Automation Quote</title>
-  <meta name="description" content="Contact ICAP Engineering to discuss your PLC programming, robot programming, or SCADA/HMI project. Get a free quote from our industrial automation experts serving clients across the USA." />
-  <meta name="keywords" content="contact ICAP Engineering, industrial automation quote, PLC programming quote, robot programming consultation, SCADA HMI quote USA" />
+  <meta name="description"
+    content="Contact ICAP Engineering to discuss your PLC programming, robot programming, or SCADA/HMI project. Get a free quote from our industrial automation experts serving clients across the USA." />
+  <meta name="keywords"
+    content="contact ICAP Engineering, industrial automation quote, PLC programming quote, robot programming consultation, SCADA HMI quote USA" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.icapengineering.com/pages/contact.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title"       content="Contact ICAP Engineering" />
+  <meta property="og:title" content="Contact ICAP Engineering" />
   <meta property="og:description" content="Get a free quote for your automation project." />
-  <meta property="og:type"        content="website" />
+  <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo-negro.svg" />
+  <link rel="icon" type="image/png" href="assets/images/logo/logo-negro.svg" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/main.css" />
@@ -100,7 +104,8 @@
 
             <!-- Mini service list -->
             <div style="margin-top: var(--space-10);" class="reveal">
-              <p style="font-family: var(--font-label); font-size: var(--text-label-sm); text-transform:uppercase; letter-spacing:0.2em; color: var(--color-secondary); margin-bottom: var(--space-4);">
+              <p
+                style="font-family: var(--font-label); font-size: var(--text-label-sm); text-transform:uppercase; letter-spacing:0.2em; color: var(--color-secondary); margin-bottom: var(--space-4);">
                 Services Available
               </p>
               <div class="tech-badges">
@@ -123,57 +128,32 @@
                 <div class="form-grid form-grid-2">
                   <div class="form-group">
                     <label for="contact-name" class="form-label">Full Name <span aria-label="required">*</span></label>
-                    <input
-                      type="text"
-                      id="contact-name"
-                      name="name"
-                      class="form-input"
-                      placeholder="John Smith"
-                      required
-                      autocomplete="name"
-                    />
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="John Smith"
+                      required autocomplete="name" />
                   </div>
                   <div class="form-group">
                     <label for="contact-company" class="form-label">Company</label>
-                    <input
-                      type="text"
-                      id="contact-company"
-                      name="company"
-                      class="form-input"
-                      placeholder="Acme Manufacturing"
-                      autocomplete="organization"
-                    />
+                    <input type="text" id="contact-company" name="company" class="form-input"
+                      placeholder="Acme Manufacturing" autocomplete="organization" />
                   </div>
                 </div>
 
                 <div class="form-grid form-grid-2">
                   <div class="form-group">
                     <label for="contact-email" class="form-label">Email <span aria-label="required">*</span></label>
-                    <input
-                      type="email"
-                      id="contact-email"
-                      name="email"
-                      class="form-input"
-                      placeholder="john@company.com"
-                      required
-                      autocomplete="email"
-                    />
+                    <input type="email" id="contact-email" name="email" class="form-input"
+                      placeholder="john@company.com" required autocomplete="email" />
                   </div>
                   <div class="form-group">
                     <label for="contact-phone" class="form-label">Phone</label>
-                    <input
-                      type="tel"
-                      id="contact-phone"
-                      name="phone"
-                      class="form-input"
-                      placeholder="+1 (555) 000-0000"
-                      autocomplete="tel"
-                    />
+                    <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000"
+                      autocomplete="tel" />
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="contact-service" class="form-label">Service Required <span aria-label="required">*</span></label>
+                  <label for="contact-service" class="form-label">Service Required <span
+                      aria-label="required">*</span></label>
                   <select id="contact-service" name="service" class="form-select" required>
                     <option value="" disabled selected>Select a service...</option>
                     <option value="plc">PLC Programming</option>
@@ -187,28 +167,20 @@
 
                 <div class="form-group">
                   <label for="contact-plc" class="form-label">PLC / Robot Brand (if applicable)</label>
-                  <input
-                    type="text"
-                    id="contact-plc"
-                    name="plc_brand"
-                    class="form-input"
-                    placeholder="e.g. Siemens S7-1500, KUKA KR 10..."
-                  />
+                  <input type="text" id="contact-plc" name="plc_brand" class="form-input"
+                    placeholder="e.g. Siemens S7-1500, KUKA KR 10..." />
                 </div>
 
                 <div class="form-group">
-                  <label for="contact-message" class="form-label">Project Description <span aria-label="required">*</span></label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    class="form-textarea"
-                    placeholder="Describe your project, industry, timeline, and any specific requirements..."
-                    required
-                    rows="5"
-                  ></textarea>
+                  <label for="contact-message" class="form-label">Project Description <span
+                      aria-label="required">*</span></label>
+                  <textarea id="contact-message" name="message" class="form-textarea"
+                    placeholder="Describe your project, industry, timeline, and any specific requirements..." required
+                    rows="5"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn--primary" id="contact-submit" style="width:100%; justify-content:center; padding-block: var(--space-4);">
+                <button type="submit" class="btn btn--primary" id="contact-submit"
+                  style="width:100%; justify-content:center; padding-block: var(--space-4);">
                   Send Message
                 </button>
 
@@ -227,4 +199,5 @@
   <script src="../assets/js/shared-layout.js"></script>
   <script src="../assets/js/visual-effects.js"></script>
 </body>
+
 </html>
