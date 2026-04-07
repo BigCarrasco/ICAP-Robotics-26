@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Primary Meta Tags -->
   <title>ICAP Engineering | Industrial Automation & PLC Programming Experts</title>
-  <meta name="description" content="ICAP Engineering specializes in PLC programming, industrial robot programming (KUKA, FANUC, UR), and SCADA/HMI system design. Serving automotive, food, mining, and medical industries across the USA." />
-  <meta name="keywords" content="PLC programming, robot programming, KUKA, FANUC, Universal Robots, SCADA, HMI, Siemens, Allen Bradley, industrial automation, TIA Portal" />
+  <meta name="description"
+    content="ICAP Engineering specializes in PLC programming, industrial robot programming (KUKA, FANUC, UR), and SCADA/HMI system design. Serving automotive, food, mining, and medical industries across the USA." />
+  <meta name="keywords"
+    content="PLC programming, robot programming, KUKA, FANUC, Universal Robots, SCADA, HMI, Siemens, Allen Bradley, industrial automation, TIA Portal" />
   <meta name="author" content="ICAP Engineering" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.icapengineering.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="ICAP Engineering | Industrial Automation Experts" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ICAP Engineering | Industrial Automation Experts" />
   <meta property="og:description" content="Expert PLC, robotics, and SCADA integration for world-class industries." />
-  <meta property="og:url"         content="https://www.icapengineering.com/" />
-  <meta property="og:image"       content="https://www.icapengineering.com/assets/images/og-home.jpg" />
+  <meta property="og:url" content="https://www.icapengineering.com/" />
+  <meta property="og:image" content="https://www.icapengineering.com/assets/images/og-home.jpg" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="ICAP Engineering | Industrial Automation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ICAP Engineering | Industrial Automation" />
   <meta name="twitter:description" content="Precision automation engineering: PLCs, robots, and SCADA systems." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
-  <link rel="icon" type="image/png"     href="assets/icons/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -67,41 +70,16 @@
   </div>
 
   <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="ICAP Engineering — Home">
-        <!-- Logo image: <img src="assets/images/logo.svg" alt="ICAP Engineering" class="navbar__logo-img"> -->
-        <div class="navbar__logo-text">
-          ICAP Engineering
-          <span>Industrial Automation</span>
-        </div>
-      </a>
-      <button class="navbar__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-      <ul class="navbar__links" id="nav-links" role="list">
-        <li><a href="index.html"          class="nav-link active">Home</a></li>
-        <li><a href="pages/services.html" class="nav-link">Services</a></li>
-        <li><a href="pages/about.html"    class="nav-link">About</a></li>
-        <li><a href="pages/contact.html"  class="nav-link">Contact</a></li>
-      </ul>
-      <div class="navbar__actions">
-        <a href="pages/contact.html" class="btn btn--primary btn--sm">Get a Quote</a>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar" role="navigation" aria-label="Main navigation"></nav>
 
   <!-- ═══ HERO ═══ -->
   <header class="hero" role="banner">
     <div class="hero__bg" aria-hidden="true">
       <!-- Replace with a real image: assets/images/hero/factory-hero.jpg -->
-      <img
-        src="assets/images/hero/hero-bg.jpg"
-        alt="Industrial robotic arm in a manufacturing facility"
-        loading="lazy"
-      />
+      <video autoplay muted loop playsinline class="hero__video" poster="assets/images/hero/hero-poster.jpg">
+        <source src="assets/videos/video-de-kuka.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
@@ -117,7 +95,7 @@
       </p>
       <div class="hero__actions reveal">
         <a href="pages/services.html" class="btn btn--primary">Explore Our Services</a>
-        <a href="pages/contact.html"  class="btn btn--secondary">Get a Free Quote</a>
+        <a href="pages/contact.html" class="btn btn--secondary">Get a Free Quote</a>
       </div>
     </div>
   </header>
@@ -145,12 +123,15 @@
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; align-items: end;">
         <div>
           <span class="section-label reveal">Capabilities</span>
-          <h2 id="strengths-heading" class="reveal" style="font-size: var(--text-display-md); text-transform: uppercase; letter-spacing: -0.03em;">
+          <h2 id="strengths-heading" class="reveal"
+            style="font-size: var(--text-display-md); text-transform: uppercase; letter-spacing: -0.03em;">
             Engineering<br />Absolute Control
           </h2>
         </div>
-        <p class="reveal" style="color: var(--color-on-surface-variant); text-align:right; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; line-height:1.8; align-self:end; max-width:300px; margin-left:auto;">
-          Deploying automated systems that operate at precision levels designed for the most demanding industrial environments.
+        <p class="reveal"
+          style="color: var(--color-on-surface-variant); text-align:right; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; line-height:1.8; align-self:end; max-width:300px; margin-left:auto;">
+          Deploying automated systems that operate at precision levels designed for the most demanding industrial
+          environments.
         </p>
       </div>
 
@@ -166,7 +147,9 @@
             Siemens TIA Portal, Allen-Bradley ControlLogix, and Koyo DirectLOGIC.
             Full programming in LAD, STL, FBD, GRAPH, and SCL languages.
           </p>
-          <div class="card__divider"><div class="card__divider-fill"></div></div>
+          <div class="card__divider">
+            <div class="card__divider-fill"></div>
+          </div>
         </article>
 
         <article class="card reveal" aria-labelledby="cap-robot">
@@ -179,7 +162,9 @@
             KUKA, FANUC, and Universal Robots (UR) — collaborative and industrial.
             Offline/online programming and virtual commissioning.
           </p>
-          <div class="card__divider"><div class="card__divider-fill"></div></div>
+          <div class="card__divider">
+            <div class="card__divider-fill"></div>
+          </div>
         </article>
 
         <article class="card reveal" aria-labelledby="cap-scada">
@@ -192,7 +177,9 @@
             Human Machine Interface design and SCADA systems using Intouch Wonderware
             and Indusoft Web Studio. Remote process monitoring and control.
           </p>
-          <div class="card__divider"><div class="card__divider-fill"></div></div>
+          <div class="card__divider">
+            <div class="card__divider-fill"></div>
+          </div>
         </article>
       </div>
 
@@ -205,11 +192,8 @@
 
       <div class="about-snapshot__image-wrap reveal">
         <!-- Replace with: assets/images/about/team-photo.jpg -->
-        <img
-          src="assets/images/about/control-panel.jpg"
-          alt="Engineer programming an industrial control panel"
-          loading="lazy"
-        />
+        <img src="assets/images/about/control-panel.jpg" alt="Engineer programming an industrial control panel"
+          loading="lazy" />
         <div class="stat-chip about-snapshot__stat">
           <p class="stat-chip__value">Multi</p>
           <p class="stat-chip__label">Sector Expertise</p>
@@ -253,77 +237,35 @@
   </section>
 
   <!-- ═══ CTA BANNER ═══ -->
-  <section style="background-color: var(--color-tertiary); padding-block: var(--space-20); padding-inline: var(--section-padding-x);" aria-label="Call to action">
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: var(--space-8);">
+  <section
+    style="background-color: var(--color-tertiary); padding-block: var(--space-20); padding-inline: var(--section-padding-x);"
+    aria-label="Call to action">
+    <div class="container"
+      style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: var(--space-8);">
       <div>
-        <h2 class="reveal" style="font-size: var(--text-headline-lg); text-transform:uppercase; color:#fff; letter-spacing:-0.02em; margin-bottom: var(--space-2);">
+        <h2 class="reveal"
+          style="font-size: var(--text-headline-lg); text-transform:uppercase; color:#fff; letter-spacing:-0.02em; margin-bottom: var(--space-2);">
           Ready to Automate Your Process?
         </h2>
         <p class="reveal" style="color:rgba(255,255,255,0.85); font-size:1rem;">
           Talk to our engineers — no commitment, just solutions.
         </p>
       </div>
-      <a href="pages/contact.html" class="btn reveal" style="background:#fff; color:#ff7162; padding: var(--space-4) var(--space-10); font-size: var(--text-label-md); font-family: var(--font-label); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; flex-shrink:0;">
+      <a href="pages/contact.html" class="btn reveal"
+        style="background:#fff; color:#ff7162; padding: var(--space-4) var(--space-10); font-size: var(--text-label-md); font-family: var(--font-label); font-weight:700; text-transform:uppercase; letter-spacing:0.1em; flex-shrink:0;">
         Contact Us Now
       </a>
     </div>
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__brand-name">ICAP Engineering</p>
-        <p class="footer__brand-tagline">Industrial Automation Experts</p>
-        <p class="footer__brand-desc">
-          Specialists in PLC programming, robot integration, and SCADA systems.
-          Serving automotive, food, mining, and medical industries across the USA.
-        </p>
-      </div>
-      <div>
-        <p class="footer__col-title">Navigation</p>
-        <nav class="footer__links" aria-label="Footer navigation">
-          <a href="index.html"          class="footer__link">Home</a>
-          <a href="pages/services.html" class="footer__link">Services</a>
-          <a href="pages/about.html"    class="footer__link">About Us</a>
-          <a href="pages/contact.html"  class="footer__link">Contact</a>
-        </nav>
-      </div>
-      <div>
-        <p class="footer__col-title">Contact</p>
-        <address style="font-style:normal;">
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-            <a href="mailto:info@icapengineering.com" class="footer__link">info@icapengineering.com</a>
-          </div>
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">phone</span>
-            <a href="tel:+15551234567" class="footer__link">+1 (555) 123-4567</a>
-          </div>
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-            <span>United States</span>
-          </div>
-        </address>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copyright">
-        &copy; <span id="footer-year">2025</span> ICAP Engineering — All rights reserved.
-      </p>
-      <div class="footer__badges" aria-label="Certifications">
-        <span class="material-symbols-outlined" title="ISO Compliant">verified_user</span>
-        <span class="material-symbols-outlined" title="Global Operations">language</span>
-        <span class="material-symbols-outlined" title="Industrial Security">shield</span>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" role="contentinfo"></footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    (function(){ const el = document.getElementById('footer-year'); if(el) el.textContent = new Date().getFullYear(); })();
-  </script>
+  <script src="assets/js/shared-layout.js"></script>
+  <script src="assets/js/visual-effects.js"></script>
+
 
 </body>
+
 </html>
