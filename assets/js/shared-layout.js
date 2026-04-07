@@ -122,15 +122,15 @@ function initFooter() {
         <address style="font-style:normal;">
           <div class="footer__contact-item">
             <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-            <a href="mailto:info@icapengineering.com" class="footer__link">info@icapengineering.com</a>
+            <a href="mailto:jonathan.verde@icap-ingenieria.com" class="footer__link">jonathan.verde@icap-ingenieria.com</a>
           </div>
           <div class="footer__contact-item">
             <span class="material-symbols-outlined" aria-hidden="true">phone</span>
-            <a href="tel:+15551234567" class="footer__link">+1 (555) 123-4567</a>
+            <a href="tel:+1 (423) 633 91 46" class="footer__link">+1 (423) 633 91 46</a>
           </div>
           <div class="footer__contact-item">
             <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-            <span>United States</span>
+            <span>Bayshore, Miami Florida </span>
           </div>
         </address>
       </div>
