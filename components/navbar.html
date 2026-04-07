@@ -1,0 +1,45 @@
+<!-- ============================================================
+  SNIPPET: Navigation Component
+  Usage: Copy-paste into any page after telemetry-strip.
+  Update active class (.active) on the corresponding nav-link.
+  ============================================================ -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+
+    <!-- Logo -->
+    <a href="../index.html" class="navbar__logo" aria-label="ICAP Engineering — Home">
+      <!-- Replace with: <img src="../assets/images/logo.svg" alt="ICAP Engineering" class="navbar__logo-img"> -->
+      <div class="navbar__logo-text">
+        ICAP Engineering
+        <span>Industrial Automation</span>
+      </div>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+      <span class="navbar__toggle-bar"></span>
+    </button>
+
+    <!-- Links -->
+    <ul class="navbar__links" id="nav-links" role="list">
+      <li><a href="../index.html"        class="nav-link" id="nav-home">Home</a></li>
+      <li><a href="../pages/services.html" class="nav-link" id="nav-services">Services</a></li>
+      <li><a href="../pages/about.html"    class="nav-link" id="nav-about">About</a></li>
+      <li><a href="../pages/contact.html"  class="nav-link" id="nav-contact">Contact</a></li>
+    </ul>
+
+    <!-- CTA -->
+    <div class="navbar__actions">
+      <a href="../pages/contact.html" class="btn btn--primary btn--sm">Get a Quote</a>
+    </div>
+
+  </div>
+</nav>

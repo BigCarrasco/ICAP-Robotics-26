@@ -1,0 +1,93 @@
+/* ============================================================
+   ICAP Engineering — Design Tokens
+   Based on: "The Kinetic Monolith" Design System
+   ============================================================ */
+
+:root {
+  /* ── Color Palette ── */
+  --color-surface:              #0e0e0e;
+  --color-surface-dim:          #0e0e0e;
+  --color-surface-bright:       #2c2c2c;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low:    #131313;
+  --color-surface-container:        #191a1a;
+  --color-surface-container-high:   #1f2020;
+  --color-surface-container-highest:#252626;
+  --color-surface-variant:          #252626;
+
+  --color-primary:              #c6c6c7;
+  --color-primary-dim:          #b8b9b9;
+  --color-primary-container:    #454747;
+  --color-on-primary:           #3f4041;
+  --color-on-primary-container: #d0d0d0;
+
+  --color-secondary:            #979fa4;
+  --color-secondary-dim:        #979fa4;
+  --color-secondary-container:  #353d41;
+  --color-on-secondary:         #192125;
+  --color-on-secondary-container: #b8c0c6;
+
+  --color-tertiary:             #ff7162;
+  --color-tertiary-dim:         #e80f16;
+  --color-tertiary-container:   #fb2422;
+  --color-on-tertiary:          #4a0002;
+
+  --color-on-surface:           #e7e5e4;
+  --color-on-surface-variant:   #acabaa;
+  --color-background:           #0e0e0e;
+  --color-on-background:        #e7e5e4;
+
+  --color-outline:              #767575;
+  --color-outline-variant:      #484848;
+
+  /* ── Typography ── */
+  --font-headline:  'Space Grotesk', sans-serif;
+  --font-body:      'Inter', sans-serif;
+  --font-label:     'Space Grotesk', sans-serif;
+
+  /* ── Font Sizes ── */
+  --text-display-lg:  clamp(2.5rem, 8vw, 5.5rem);
+  --text-display-md:  clamp(2rem, 6vw, 4rem);
+  --text-headline-lg: clamp(1.75rem, 4vw, 3rem);
+  --text-headline-md: clamp(1.25rem, 3vw, 2rem);
+  --text-title-lg:    1.375rem;
+  --text-title-md:    1rem;
+  --text-body-lg:     1rem;
+  --text-body-md:     0.875rem;
+  --text-label-lg:    0.875rem;
+  --text-label-md:    0.75rem;
+  --text-label-sm:    0.6875rem;
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Layout ── */
+  --container-max: 1440px;
+  --section-padding-x: clamp(1.5rem, 5vw, 5rem);
+  --section-padding-y: clamp(4rem, 8vw, 8rem);
+
+  /* ── Transitions ── */
+  --transition-fast:   0.15s ease-out;
+  --transition-normal: 0.2s ease-out;
+  --transition-slow:   0.4s ease-out;
+
+  /* ── Borders ── */
+  --border-radius: 0px;    /* Kinetic Monolith = 0 radius */
+  --border-subtle: 1px solid rgba(72, 72, 72, 0.15);
+  --border-ghost:  1px solid rgba(72, 72, 72, 0.20);
+
+  /* ── Shadows ── */
+  --shadow-float: 0 40px 80px rgba(0, 0, 0, 0.6);
+  --shadow-card:  0 8px 32px rgba(0, 0, 0, 0.4);
+}

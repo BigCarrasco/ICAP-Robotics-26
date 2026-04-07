@@ -1,0 +1,70 @@
+<!-- ============================================================
+  SNIPPET: Footer Component
+  Usage: Copy-paste into any page before closing </body>.
+  Adjust relative paths (../) for pages in /pages/ subfolder.
+  ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+
+    <!-- Brand -->
+    <div>
+      <p class="footer__brand-name">ICAP Engineering</p>
+      <p class="footer__brand-tagline">Industrial Automation Experts</p>
+      <p class="footer__brand-desc">
+        Specialists in PLC programming, robot integration, and SCADA systems.
+        Serving automotive, food, mining, and medical industries across the USA.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div>
+      <p class="footer__col-title">Navigation</p>
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="../index.html"         class="footer__link">Home</a>
+        <a href="../pages/services.html" class="footer__link">Services</a>
+        <a href="../pages/about.html"    class="footer__link">About Us</a>
+        <a href="../pages/contact.html"  class="footer__link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <p class="footer__col-title">Contact</p>
+      <address class="footer__links" style="font-style:normal;">
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          <a href="mailto:info@icapengineering.com" class="footer__link">info@icapengineering.com</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+          <a href="tel:+15551234567" class="footer__link">+1 (555) 123-4567</a>
+        </div>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          <span>United States</span>
+        </div>
+      </address>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer__bottom">
+    <p class="footer__copyright">
+      &copy; <span id="footer-year">2025</span> ICAP Engineering LLC — All rights reserved.
+    </p>
+    <div class="footer__badges" aria-label="Certifications">
+      <span class="material-symbols-outlined" aria-label="Verified" title="ISO Compliant">verified_user</span>
+      <span class="material-symbols-outlined" aria-label="Global reach" title="Global Operations">language</span>
+      <span class="material-symbols-outlined" aria-label="Secure systems" title="Industrial Security">shield</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto-update copyright year
+  (function() {
+    const el = document.getElementById('footer-year');
+    if (el) el.textContent = new Date().getFullYear();
+  })();
+</script>
