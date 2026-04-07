@@ -172,22 +172,32 @@
 
 @media (max-width: 768px) {
   .navbar__links {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--color-surface-container-lowest);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-surface); /* Fondo sólido anti-sobremontado */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: var(--space-12);
     z-index: 99;
+    /* Transición UX Premium */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
   }
-  .navbar__links.is-open { display: flex; }
-  .navbar__links .nav-link { font-size: 1.25rem; }
-  .navbar__toggle { display: flex; z-index: 100; position: relative; }
+  .navbar__links.is-open { 
+    opacity: 1; 
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .navbar__links .nav-link { font-size: 1.5rem; }
+  .navbar__toggle { display: flex; z-index: 101; position: relative; }
   .navbar__actions .btn { display: none; }
 }
 
