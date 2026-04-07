@@ -570,13 +570,43 @@
    PAGE HERO (shared hero structure)
 ────────────────────────────────────────────── */
 .page-hero {
+  position: relative;
   background-color: var(--color-surface);
-  padding-block: var(--space-32);
+  min-height: 60vh; /* Devuelve el impacto visual y la prioridad a la cabecera */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-40);
   padding-inline: var(--section-padding-x);
   border-bottom: var(--border-subtle);
+  overflow: hidden;
 }
 
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.45;
+  pointer-events: none;
+  /* El corte diagonal que pediste */
+  -webkit-mask-image: linear-gradient(115deg, transparent 48%, black 78%);
+  mask-image: linear-gradient(115deg, transparent 48%, black 78%);
+}
+
+/* Variantes para cargar imágenes diferentes */
+.page-hero--services::before { background-image: url('../images/services/robot-arm.jpg'); }
+.page-hero--about::before { background-image: url('../images/about/engineer.jpg'); }
+.page-hero--contact::before { background-image: url('../images/appointment.jpg'); }
+
 .page-hero__inner {
+  position: relative;
+  z-index: 2;
   max-width: var(--container-max);
   margin-inline: auto;
 }
