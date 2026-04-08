@@ -39,6 +39,11 @@ function initNavbar() {
       </ul>
       
       <div class="navbar__actions">
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-separator">|</span>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
         <a href="${basePath}pages/contact.html" class="btn btn--primary btn--sm">Get a Quote</a>
       </div>
     </div>
