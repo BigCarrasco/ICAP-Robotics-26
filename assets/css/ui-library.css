@@ -409,8 +409,8 @@
 
 .footer__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--space-12);
+  grid-template-columns: 1.5fr 1fr 1fr; /* Marca más ancha, sedes iguales */
+  gap: var(--space-8);
   max-width: var(--container-max);
   margin-inline: auto;
   padding-bottom: var(--space-12);

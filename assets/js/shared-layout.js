@@ -100,39 +100,37 @@ function initFooter() {
 
   const footerHTML = `
     <div class="footer__inner">
-      <div>
-        <p class="footer__brand-name">ICAP Engineering</p>
-        <p class="footer__brand-tagline">Industrial Automation Experts</p>
-        <p class="footer__brand-desc">
-          Specialists in PLC programming, robot integration, and SCADA systems.
-          Serving automotive, food, mining, and medical industries across the USA.
-        </p>
+      <div class="footer__brand">
+        <p class="footer__brand-name">ICAP ENGINEERING</p>
+        <p class="footer__brand-tagline">Global Automation & Robotics</p>
+        <div class="footer__contact-item" style="margin-top: var(--space-4);">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          <a href="mailto:info@icap-ingenieria.com" class="footer__link">info@icap-ingenieria.com</a>
+        </div>
       </div>
-      <div>
-        <p class="footer__col-title">Navigation</p>
-        <nav class="footer__links" aria-label="Footer navigation">
-          <a href="${basePath}index.html" class="footer__link">Home</a>
-          <a href="${basePath}pages/services.html" class="footer__link">Services</a>
-          <a href="${basePath}pages/about.html" class="footer__link">About Us</a>
-          <a href="${basePath}pages/contact.html" class="footer__link">Contact</a>
-        </nav>
+
+      <div class="footer__col">
+        <p class="footer__col-title">USA Headquarters</p>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          <span class="footer__link">Miami, Florida (Bayshore)</span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+          <a href="tel:+14236339146" class="footer__link">+1 (423) 633 91 46</a>
+        </div>
       </div>
-      <div>
-        <p class="footer__col-title">Contact</p>
-        <address style="font-style:normal;">
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-            <a href="mailto:jonathan.verde@icap-ingenieria.com" class="footer__link">jonathan.verde@icap-ingenieria.com</a>
-          </div>
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">phone</span>
-            <a href="tel:+1 (423) 633 91 46" class="footer__link">+1 (423) 633 91 46</a>
-          </div>
-          <div class="footer__contact-item">
-            <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
-            <span>Bayshore, Miami Florida </span>
-          </div>
-        </address>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Mexico Branch</p>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+          <span class="footer__link">Colima, Mexico</span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+          <a href="tel:+523141026047" class="footer__link">+52 (314) 102 60 47</a>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
