@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initFooter();
+  initPWA();
 });
 
 function initNavbar() {
@@ -108,9 +109,10 @@ function initFooter() {
       <div class="footer__brand">
         <p class="footer__brand-name">ICAP ENGINEERING</p>
         <p class="footer__brand-tagline">Global Automation & Robotics</p>
-        <div class="footer__contact-item" style="margin-top: var(--space-4);">
-          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
-          <a href="mailto:info@icap-ingenieria.com" class="footer__link">info@icap-ingenieria.com</a>
+        <div class="footer__social" style="margin-top: var(--space-6); display: flex; gap: var(--space-4);">
+          <a href="https://www.linkedin.com/company/icap-company/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+            <svg style="width:20px; height:20px; fill:currentColor;" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
         </div>
       </div>
 
@@ -137,6 +139,18 @@ function initFooter() {
           <a href="tel:+523141026047" class="footer__link">+52 (314) 102 60 47</a>
         </div>
       </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Opening Hours</p>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+          <span class="footer__link">Mon — Fri: 8:00 - 16:00</span>
+        </div>
+        <div class="footer__contact-item">
+          <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+          <a href="mailto:info@icap-ingenieria.com" class="footer__link">info@icap-ingenieria.com</a>
+        </div>
+      </div>
     </div>
     <div class="footer__bottom">
       <p class="footer__copyright">
@@ -151,4 +165,79 @@ function initFooter() {
     `;
 
   footerContainer.innerHTML = footerHTML;
+}
+
+/**
+ * Lógica PWA e Invitación de Tercera Visita (Android/Chrome)
+ */
+function initPWA() {
+  const isInFolder = window.location.pathname.includes('/pages/');
+  const basePath = isInFolder ? '../' : '/';
+
+  // 1. Registrar Service Worker para habilitar el modo PWA Offline
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      // El SW debe estar en la raíz para tener alcance en todo el sitio
+      navigator.serviceWorker.register('/sw.js').catch(err => {
+        console.log('PWA SW no registrado localmente, requiere HTTPS/servidor: ', err);
+      });
+    });
+  }
+
+  // 2. Lógica del Banner de Instalación Inteligente
+  let deferredPrompt;
+  const pwaBanner = document.createElement('div');
+  pwaBanner.className = 'pwa-banner';
+  pwaBanner.innerHTML = `
+    <div class="pwa-banner__content">
+      <div class="pwa-banner__icon"><span class="material-symbols-outlined">install_mobile</span></div>
+      <div class="pwa-banner__text">
+        <p class="pwa-banner__title">Install ICAP App</p>
+        <p class="pwa-banner__desc">Quick access to our automation services directly from your home screen.</p>
+      </div>
+    </div>
+    <div class="pwa-banner__actions">
+      <button class="btn btn--secondary btn--sm" id="pwa-dismiss">Not Now</button>
+      <button class="btn btn--primary btn--sm" id="pwa-install">Install</button>
+    </div>
+  `;
+  document.body.appendChild(pwaBanner);
+
+  // Chrome lanza este evento si la app es instalable
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); // Evitamos que salga el feo banner genérico abajo
+    deferredPrompt = e;
+    
+    // Contar visitas al sitio
+    let visits = parseInt(localStorage.getItem('icap_visits')) || 0;
+    visits++;
+    localStorage.setItem('icap_visits', visits);
+
+    const isDismissed = localStorage.getItem('icap_pwa_dismissed');
+
+    // 3. UI/UX: Solo lo molestamos en la tercera visita
+    if (visits >= 3 && !isDismissed) {
+      setTimeout(() => {
+        pwaBanner.classList.add('is-visible');
+      }, 2500); // Aparece 2.5 segundos después de cargar la web
+    }
+  });
+
+  document.getElementById('pwa-install').addEventListener('click', async () => {
+    if (deferredPrompt) {
+      pwaBanner.classList.remove('is-visible');
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        localStorage.setItem('icap_pwa_dismissed', 'true');
+      }
+      deferredPrompt = null;
+    }
+  });
+
+  document.getElementById('pwa-dismiss').addEventListener('click', () => {
+    pwaBanner.classList.remove('is-visible');
+    // Guardamos que no quiere instalarla por ahora
+    localStorage.setItem('icap_pwa_dismissed', 'true'); 
+  });
 }
