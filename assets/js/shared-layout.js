@@ -168,12 +168,9 @@ function initFooter() {
 }
 
 /**
- * Lógica PWA e Invitación de Tercera Visita (Android/Chrome)
+ * Lógica PWA: Registro de Service Worker para soporte Offline
  */
 function initPWA() {
-  const isInFolder = window.location.pathname.includes('/pages/');
-  const basePath = isInFolder ? '../' : '/';
-
   // 1. Registrar Service Worker para habilitar el modo PWA Offline
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -183,61 +180,4 @@ function initPWA() {
       });
     });
   }
-
-  // 2. Lógica del Banner de Instalación Inteligente
-  let deferredPrompt;
-  const pwaBanner = document.createElement('div');
-  pwaBanner.className = 'pwa-banner';
-  pwaBanner.innerHTML = `
-    <div class="pwa-banner__content">
-      <div class="pwa-banner__icon"><span class="material-symbols-outlined">install_mobile</span></div>
-      <div class="pwa-banner__text">
-        <p class="pwa-banner__title">Install ICAP App</p>
-        <p class="pwa-banner__desc">Quick access to our automation services directly from your home screen.</p>
-      </div>
-    </div>
-    <div class="pwa-banner__actions">
-      <button class="btn btn--secondary btn--sm" id="pwa-dismiss">Not Now</button>
-      <button class="btn btn--primary btn--sm" id="pwa-install">Install</button>
-    </div>
-  `;
-  document.body.appendChild(pwaBanner);
-
-  // Chrome lanza este evento si la app es instalable
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); // Evitamos que salga el feo banner genérico abajo
-    deferredPrompt = e;
-    
-    // Contar visitas al sitio
-    let visits = parseInt(localStorage.getItem('icap_visits')) || 0;
-    visits++;
-    localStorage.setItem('icap_visits', visits);
-
-    const isDismissed = localStorage.getItem('icap_pwa_dismissed');
-
-    // 3. UI/UX: Solo lo molestamos en la tercera visita
-    if (visits >= 3 && !isDismissed) {
-      setTimeout(() => {
-        pwaBanner.classList.add('is-visible');
-      }, 2500); // Aparece 2.5 segundos después de cargar la web
-    }
-  });
-
-  document.getElementById('pwa-install').addEventListener('click', async () => {
-    if (deferredPrompt) {
-      pwaBanner.classList.remove('is-visible');
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        localStorage.setItem('icap_pwa_dismissed', 'true');
-      }
-      deferredPrompt = null;
-    }
-  });
-
-  document.getElementById('pwa-dismiss').addEventListener('click', () => {
-    pwaBanner.classList.remove('is-visible');
-    // Guardamos que no quiere instalarla por ahora
-    localStorage.setItem('icap_pwa_dismissed', 'true'); 
-  });
 }
